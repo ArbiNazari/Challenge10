@@ -42,7 +42,7 @@
     ├── __tests__/             //jest tests
     │   ├── Employee.test.js
     │   ├── Engineer.test.js
-        │   ├── Intern.test.js
+    │   ├── Intern.test.js
     │   └── Manager.test.js
     ├── dist/                  // rendered output (HTML) and CSS style sheet      
     ├── lib/                   // classes
