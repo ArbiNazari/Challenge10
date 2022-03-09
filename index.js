@@ -18,18 +18,18 @@ const htmlCard = (e) => {
   let icon = "";
   switch (e.getRole()) {
     case Employee.Manager:
-      roleInfo = `<i class="bi bi-building"></i> Office: <strong>${e.officeNumber}</strong>`;
-      employeeTypeClasses = "bg-primary bg-gradient text-light";
+      roleInfo = `<i class="bi bi-shop-window"></i> Office: <strong>${e.officeNumber}</strong>`;
+      employeeTypeClasses = "text-warning bg-gradient";
       icon = "<i class='bi bi-archive-fill'></i>";
       break;
     case Employee.Intern:
       roleInfo = `<i class="bi bi-globe"></i> School: <strong>${e.getSchool()}</strong>`;
-      employeeTypeClasses = "bg-success bg-gradient text-light";
-      icon = "<i class='bi bi-mortarboard-fill'></i>";
+      employeeTypeClasses = "text-danger bg-gradient";
+      icon = "<i class='bi bi-mortarboard'></i>";
       break;
     case Employee.Engineer:
       roleInfo = `<i class="bi-github" role="img" aria-label="GitHub"></i> Github: ${e.getGithub()}`;
-      employeeTypeClasses = "bg-secondary bg-gradient text-light";
+      employeeTypeClasses = "text-info bg-gradient";
       icon = "<i class='bi bi-archive-fill'></i>";
       break;
   }
@@ -45,13 +45,13 @@ const htmlCard = (e) => {
             <div class='card-body'>
               <ul class='list-group'>
                 <li class='list-group-item'>
-                  Role: <strong>${e.getRole()}</strong>
+                  Employee Role: <strong>${e.getRole()}</strong>
                 </li>
                 <li class='list-group-item'>
-                  Id: <strong>${e.getId()}</strong>
+                  Employee Id: <strong>${e.getId()}</strong>
                 </li>            
                 <li class='list-group-item'>
-                  Email:  
+                  Employee Email:  
                   <a href="mailto: ${e.getEmail()}">${e.getEmail()}</a>
                 </li>
                 <li class='list-group-item list-group-item-secondary'>
@@ -73,7 +73,7 @@ const displayEmployees = (employees) => {
 
 const generateHTML = (employees) => {
   const styles = [];
-  styles.push(`body{font-size:80%;}`);
+  styles.push(`body{font-size:85%;}`);
 
   return `<!DOCTYPE html>
   <html lang="en">
@@ -84,12 +84,13 @@ const generateHTML = (employees) => {
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
       <style>${styles.join("")}</style>
-      <title>Object-Oriented Programming Challenge</title>
+      <title>Object-Oriented Programming Challenge #10 </title>
   </head>
   <body>
+  <body style="background-color:#f2c7ef;">
     <div class="container p-5">
       <div class="row">
-        <h1 class="text-center">My Team</h1>
+        <h1 class="text-center">My Team - Oriented Programming Challenge #10</h1>
       </div>
     </div>
     <div class="container">
@@ -110,7 +111,7 @@ function writeToFile(fileName, data) {
 
 const validation = {
   required: (response) => {
-    return response ? true : console.error("Please answer.");
+    return response ? true : console.error("Please Answer");
   },
 };
 
