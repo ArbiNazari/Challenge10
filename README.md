@@ -4,6 +4,7 @@
 
   ## Table-of-Contents
   * [Description and Task](#description)
+  * [Video](#video)   
   * [License](#license)   
   * [Contributing](#contributing)
   * [Questions](#questions)
@@ -53,6 +54,8 @@
 
 
 After installing the required applications (Node.js) - run: node index.js
+
+  ## [Video](#table-of-contents)
  
    Video Guide - [video guide](https://www.awesomescreenshot.com/video/7790151?key=e51f3554f3148b6aff360129fdaee951)
   
